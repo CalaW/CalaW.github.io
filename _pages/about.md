@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Dare Mighty Things.
+subtitle: Dare mighty things.
 
 profile:
   align: right
