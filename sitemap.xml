@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <url> <loc>https://calaw.github.io/projects/Aruco_Tracking_Drone/</loc> <lastmod>2023-03-26T17:40:34+00:00</lastmod> </url> <url> <loc>https://calaw.github.io/projects/Jump_Point_Search/</loc> <lastmod>2023-03-26T17:40:34+00:00</lastmod> </url> <url> <loc>https://calaw.github.io/projects/Marine_Classification/</loc> <lastmod>2023-03-26T17:40:34+00:00</lastmod> </url> <url> <loc>https://calaw.github.io/projects/Mesh_Simplification/</loc> <lastmod>2023-03-26T17:40:34+00:00</lastmod> </url> <url> <loc>https://calaw.github.io/cv/</loc> </url> <url> <loc>https://calaw.github.io/</loc> </url> <url> <loc>https://calaw.github.io/awards/</loc> </url> <url> <loc>https://calaw.github.io/news/</loc> </url> <url> <loc>https://calaw.github.io/projects/</loc> </url> <url> <loc>https://calaw.github.io/publications/</loc> </url> </urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://calaw.github.io/projects/Aruco_Tracking_Drone/</loc>
+<lastmod>2023-03-26T18:00:09+00:00</lastmod>
+</url>
+<url>
+<loc>https://calaw.github.io/projects/Jump_Point_Search/</loc>
+<lastmod>2023-03-26T18:00:09+00:00</lastmod>
+</url>
+<url>
+<loc>https://calaw.github.io/projects/Marine_Classification/</loc>
+<lastmod>2023-03-26T18:00:09+00:00</lastmod>
+</url>
+<url>
+<loc>https://calaw.github.io/projects/Mesh_Simplification/</loc>
+<lastmod>2023-03-26T18:00:09+00:00</lastmod>
+</url>
+<url>
+<loc>https://calaw.github.io/cv/</loc>
+</url>
+<url>
+<loc>https://calaw.github.io/</loc>
+</url>
+<url>
+<loc>https://calaw.github.io/awards/</loc>
+</url>
+<url>
+<loc>https://calaw.github.io/news/</loc>
+</url>
+<url>
+<loc>https://calaw.github.io/projects/</loc>
+</url>
+<url>
+<loc>https://calaw.github.io/publications/</loc>
+</url>
+</urlset>
