@@ -21,5 +21,3 @@ I have been working as a research assisstant at **[Intelligent Robotic Manipulat
 Prior to that, I was a research intern at **[DISCOVER Lab](https://github.com/AIR-DISCOVER)**.
 My research interests include **human robot interaction** and **medical robots**.
 
-## Research Topics
-
