@@ -9,6 +9,8 @@ category: work
 
 Implemented Jump Point Search (JPS) and A* search, using Unity3D.
 
+A technical speech of this project is delivered in front of the class for Artificial Intelligence (3 out of 170 students).
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
