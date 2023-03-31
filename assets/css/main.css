@@ -110,9 +110,9 @@ h6,
 em,
 div,
 li,
-span,
 strong {
   color: var(--global-text-color);
+  font-family: "Lora", "Noto Serif SC", serif;
 }
 
 hr {
@@ -561,7 +561,7 @@ footer.sticky-bottom {
   border: 1px solid var(--global-theme-color);
 }
 .publications ol.bibliography li .title {
-  font-weight: bolder;
+  font-weight: 500;
 }
 .publications ol.bibliography li .author a {
   border-bottom: 1px dashed var(--global-theme-color);
@@ -609,7 +609,7 @@ footer.sticky-bottom {
   font-size: 0.875rem;
   max-height: 0px;
   overflow: hidden;
-  text-align: justify;
+  text-align: match-parent;
   transition-property: 0.15s ease;
   -moz-transition: 0.15s ease;
   -ms-transition: 0.15s ease;
