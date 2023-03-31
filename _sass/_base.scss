@@ -14,9 +14,10 @@ h6,
 em,
 div,
 li,
-span,
+// span,
 strong {
   color: var(--global-text-color);
+  font-family: 'Lora', 'Noto Serif SC', serif;
 }
 
 hr {
@@ -597,7 +598,7 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: bolder;
+        font-weight: 500;
       }
 
       .author {
@@ -661,7 +662,7 @@ footer.sticky-bottom {
         font-size: 0.875rem;
         max-height: 0px;
         overflow: hidden;
-        text-align: justify;
+        text-align: match-parent;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
