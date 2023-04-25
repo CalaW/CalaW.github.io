@@ -35,34 +35,19 @@ $viva-magenta-color:  #BE3455 !default;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-
-// nord palette
-// polar night
-$nord0: #2E3440 !default;
-$nord1: #3B4252 !default;
-$nord2: #434C5E !default;
-$nord3: #4C566A !default;
-
-// snow storm
-$nord4: #D8DEE9 !default;
-$nord5: #E5E9F0 !default;
-$nord6: #ECEFF4 !default;
-
-// frost
-$nord7: #8FBCBB !default;
-$nord8: #88C0D0 !default;
-$nord9: #81A1C1 !default;
-$nord10: #5E81AC !default;
-
-// aurora
-$nord11: #BF616A !default;
-$nord12: #D08770 !default;
-$nord13: #EBCB8B !default;
-$nord14: #A3BE8C !default;
-$nord14: #B48EAD !default;
-
+$dracula-BG       : #22212C !default;
+$dracula-FG       : #F8F8F2 !default;
+$dracula-SELECTION: #454158 !default;
+$dracula-COMMENT  : #7970A9 !default;
+$dracula-CYAN     : #80FFEA !default;
+$dracula-GREEN    : #8AFF80 !default;
+$dracula-ORANGE   : #FFCA80 !default;
+$dracula-PINK     : #FF80BF !default;
+$dracula-PURPLE   : #9580FF !default;
+$dracula-RED      : #FF9580 !default;
+$dracula-YELLOW   : #FFFF80 !default;
 
 // Theme colors
 
 $code-bg-color-light:     rgba($classic-blue-color, 0.05);
-$code-bg-color-dark:      $nord1;
+$code-bg-color-dark:      $dracula-BG;

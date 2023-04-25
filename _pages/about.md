@@ -15,9 +15,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an undergraduate student at Tsinghua University (THU), majoring in automation.
+I am a third-year undergraduate student at Tsinghua University (THU), majoring in automation.
 
-I have been working as a research assistant at **[Intelligent Robotic Manipulation Lab](https://sites.google.com/view/homepageoflixiang/home)** since 2021, advised by **[Prof. Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ)**.
-Prior to that, I was a research intern at **[DISCOVER Lab](https://github.com/AIR-DISCOVER)**.
-My research interests include *human robot interaction* and *medical robots*.
+My research interests include ***human robot interaction*** and ***medical and healthcare robots***.
 
+I have been working as a research assistant at [Intelligent Robotic Manipulation Lab](https://sites.google.com/view/homepageoflixiang/home) in Tsinghua since 2021, advised by Professor [Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ).
+Prior to that, I was a research intern at [DISCOVER Lab](https://github.com/AIR-DISCOVER).
+
+I will start working as a research intern at [Robotic Caregiving and Human Interaction (RCHI) lab](https://rchi-lab.github.io) in Carnegie Mellon University this summer, advised by Professor [Zackory Erickson](https://zackory.com).

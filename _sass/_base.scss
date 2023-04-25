@@ -4,20 +4,16 @@
 
 // Typography
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-em,
-div,
-li,
-// span,
-strong {
+p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
+}
+
+p, h1, h2, h3, h4, h5, h6, li {
   font-family: 'Lora', 'Noto Serif SC', serif;
+}
+
+strong {
+  font-weight: 600;
 }
 
 hr {
@@ -598,7 +594,7 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: 500;
+        font-weight: 600;
       }
 
       .author {
@@ -636,6 +632,7 @@ footer.sticky-bottom {
           padding-right: 1rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
+          font-family: "Roboto", sans-serif;
 
           &:hover {
             color: var(--global-theme-color);
