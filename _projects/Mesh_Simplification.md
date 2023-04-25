@@ -6,3 +6,5 @@ img: assets/img/Marine-vggdiag.svg
 importance: 1
 category: work
 ---
+
+Mesh Simplification
