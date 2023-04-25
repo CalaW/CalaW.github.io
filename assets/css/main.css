@@ -587,17 +587,21 @@ footer.sticky-bottom {
   padding-right: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  margin-left: 0;
   font-family: "Roboto", sans-serif;
 }
 .publications ol.bibliography li .links a.btn:hover {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
 }
+.publications ol.bibliography li .badges {
+  padding-bottom: 0.5rem;
+}
 .publications ol.bibliography li .badges span {
   display: inline-block;
   color: #000000;
   height: 100%;
-  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   vertical-align: middle;
 }
 .publications ol.bibliography li .badges span:hover {
@@ -805,6 +809,26 @@ d-article a:hover {
 }
 d-article b i {
   display: inline;
+}
+d-article details {
+  color: var(--global-text-color);
+  background-color: var(--global-code-bg-color);
+  margin-top: 0;
+  padding: 8px 12px;
+  position: relative;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 20px;
+  grid-column: text;
+  overflow: auto;
+  max-width: 100%;
+}
+d-article details summary {
+  color: var(--global-theme-color);
+}
+d-article details p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 d-article d-contents {
   align-self: start;
