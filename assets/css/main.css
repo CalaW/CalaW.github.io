@@ -11,7 +11,7 @@
   --global-text-color: #000000;
   --global-text-color-light: #828282;
   --global-theme-color: #0F4C81;
-  --global-hover-color: #0F4C81;
+  --global-hover-color: #0a3153;
   --global-footer-bg-color: #1C1C1D;
   --global-footer-text-color: #e8e8e8;
   --global-footer-link-color: #ffffff;
@@ -35,18 +35,18 @@
 }
 
 html[data-theme=dark] {
-  --global-bg-color: #2E3440;
-  --global-code-bg-color: #3B4252;
-  --global-text-color: #ECEFF4;
-  --global-text-color-light: #ECEFF4;
-  --global-theme-color: #88C0D0;
-  --global-hover-color: #8FBCBB;
-  --global-footer-bg-color: #3B4252;
-  --global-footer-text-color: #E5E9F0;
-  --global-footer-link-color: #ECEFF4;
-  --global-distill-app-color: #4C566A;
-  --global-divider-color: #4C566A;
-  --global-card-bg-color: #3B4252;
+  --global-bg-color: #22212C;
+  --global-code-bg-color: #22212C;
+  --global-text-color: #F8F8F2;
+  --global-text-color-light: #efefe1;
+  --global-theme-color: #8AFF80;
+  --global-hover-color: #2cff1a;
+  --global-footer-bg-color: #17161d;
+  --global-footer-text-color: #b5b0cf;
+  --global-footer-link-color: #b5b0cf;
+  --global-distill-app-color: #454158;
+  --global-divider-color: #7970A9;
+  --global-card-bg-color: #3a3649;
 }
 html[data-theme=dark] .fa-sun {
   padding-left: 10px;
@@ -100,19 +100,16 @@ body.sticky-bottom-footer {
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-em,
-div,
-li,
-strong {
+p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
+}
+
+p, h1, h2, h3, h4, h5, h6, li {
   font-family: "Lora", "Noto Serif SC", serif;
+}
+
+strong {
+  font-weight: 600;
 }
 
 hr {
@@ -561,7 +558,7 @@ footer.sticky-bottom {
   border: 1px solid var(--global-theme-color);
 }
 .publications ol.bibliography li .title {
-  font-weight: 500;
+  font-weight: 600;
 }
 .publications ol.bibliography li .author a {
   border-bottom: 1px dashed var(--global-theme-color);
@@ -590,6 +587,7 @@ footer.sticky-bottom {
   padding-right: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  font-family: "Roboto", sans-serif;
 }
 .publications ol.bibliography li .links a.btn:hover {
   color: var(--global-theme-color);
