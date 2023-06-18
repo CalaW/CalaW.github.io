@@ -12,12 +12,25 @@
   --global-text-color-light: #828282;
   --global-theme-color: #0F4C81;
   --global-hover-color: #0a3153;
+  --global-hover-text-color: #ffffff;
   --global-footer-bg-color: #1C1C1D;
   --global-footer-text-color: #e8e8e8;
   --global-footer-link-color: #ffffff;
   --global-distill-app-color: #828282;
   --global-divider-color: rgba(0,0,0,.1);
   --global-card-bg-color: #ffffff;
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #e2f5ec;
+  --global-tip-block-text: #215d42;
+  --global-tip-block-title: #359469;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #fff8d8;
+  --global-warning-block-text: #6b5900;
+  --global-warning-block-title: #b29400;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-text: #600;
+  --global-danger-block-title: #c00;
 }
 :root .fa-sun {
   display: none;
@@ -41,12 +54,25 @@ html[data-theme=dark] {
   --global-text-color-light: #efefe1;
   --global-theme-color: #8AFF80;
   --global-hover-color: #2cff1a;
+  --global-hover-text-color: #ffffff;
   --global-footer-bg-color: #17161d;
   --global-footer-text-color: #b5b0cf;
   --global-footer-link-color: #b5b0cf;
   --global-distill-app-color: #454158;
   --global-divider-color: #7970A9;
   --global-card-bg-color: #3a3649;
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #e2f5ec;
+  --global-tip-block-text: #215d42;
+  --global-tip-block-title: #359469;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #fff8d8;
+  --global-warning-block-text: #6b5900;
+  --global-warning-block-title: #b29400;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-text: #600;
+  --global-danger-block-title: #c00;
 }
 html[data-theme=dark] .fa-sun {
   padding-left: 10px;
@@ -118,10 +144,10 @@ hr {
 
 table td,
 table th {
-  color: var(--global-text-color);
-}
-table td {
   font-size: 1rem;
+}
+table th {
+  font-weight: bold;
 }
 
 a,
@@ -136,6 +162,10 @@ table.table a:hover {
 a:hover:after :not(.nav-item.dropdown),
 table.table a:hover:after :not(.nav-item.dropdown) {
   width: 100%;
+}
+
+.table-dark {
+  background-color: transparent;
 }
 
 figure,
@@ -387,6 +417,12 @@ footer.sticky-bottom {
   background-color: var(--global-theme-color) !important;
 }
 
+.table-cv-map {
+  background-color: transparent;
+  border: none;
+  color: var(--global-text-color);
+}
+
 @media (min-width: 768px) {
   .repo {
     max-width: 50%;
@@ -420,6 +456,10 @@ footer.sticky-bottom {
   color: var(--global-text-color-light);
 }
 
+.post-title mjx-container[jax=CHTML][display=true] {
+  display: unset;
+}
+
 .post-list {
   margin: 0;
   margin-bottom: 40px;
@@ -448,6 +488,9 @@ footer.sticky-bottom {
 }
 .post-list li a:hover {
   color: var(--global-theme-color);
+}
+.post-list li mjx-container[jax=CHTML][display=true] {
+  display: unset;
 }
 
 .pagination .page-item .page-link {
@@ -697,6 +740,9 @@ html.transition *:after {
   border-left: 5px solid var(--global-theme-color);
   padding: 8px;
 }
+.post .post-content blockquote p {
+  margin-bottom: 0;
+}
 
 progress {
   /* Positioning */
@@ -748,30 +794,127 @@ progress::-moz-progress-bar {
   height: inherit;
 }
 
-pre {
-  padding: 8px 12px;
+/* Copy button */
+.code-display-wrapper {
   position: relative;
-  /* Copy code to clipboard button */
 }
-pre .copy {
+.code-display-wrapper .copy {
   background: var(--global-card-bg-color);
   border-color: var(--global-bg-color);
   border-radius: 0.3rem;
-  border-style: solid;
+  border-style: none;
   color: var(--global-text-color);
   font-size: medium;
   opacity: 0;
   position: absolute;
-  right: 0.25rem;
-  top: 0.25rem;
+  right: 0.5rem;
+  top: 0.5rem;
 }
-pre .copy:active, pre .copy:focus, pre .copy:hover {
+.code-display-wrapper:active .copy, .code-display-wrapper:focus .copy, .code-display-wrapper:hover .copy {
   color: var(--global-hover-color);
   opacity: 1;
 }
-pre:active .copy, pre:focus .copy, pre:hover .copy {
+
+.btn-group.dropdown .btn {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.btn-group.dropdown .btn-secondary.dropdown-toggle {
+  border: 1px solid var(--global-divider-color);
+}
+.btn-group.dropdown .btn-secondary.dropdown-toggle .page-size {
+  color: inherit;
+}
+.btn-group.dropdown .btn-secondary.dropdown-toggle:not(.active) {
+  background-color: var(--global-bg-color) !important;
+  color: var(--global-text-color);
+}
+.btn-group.dropdown .btn-secondary.dropdown-toggle:hover {
+  background-color: var(--global-hover-color) !important;
+  color: var(--global-hover-text-color) !important;
+}
+.btn-group.dropdown .dropdown-menu {
+  background-color: var(--global-bg-color);
+}
+.btn-group.dropdown .dropdown-item {
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color);
+}
+.btn-group.dropdown .dropdown-item:hover {
   color: var(--global-hover-color);
-  opacity: 1;
+}
+.btn-group.dropdown .dropdown-item.active, .btn-group.dropdown .dropdown-item:active {
+  background-color: var(--global-hover-color);
+  color: var(--global-hover-text-color) !important;
+}
+.btn-group.dropdown .dropdown-item.active:hover, .btn-group.dropdown .dropdown-item:active:hover {
+  color: var(--global-hover-text-color);
+}
+
+/* Table of Contents */
+nav[data-toggle=toc] {
+  top: 5rem;
+}
+nav[data-toggle=toc] .nav .nav > li > a {
+  font-size: 0.75rem;
+}
+nav[data-toggle=toc] .nav > li > a {
+  color: var(--global-text-color);
+  font-size: 0.75rem;
+}
+nav[data-toggle=toc] .nav > li > a:hover {
+  color: var(--global-hover-color);
+  border-left-color: var(--global-hover-color);
+}
+nav[data-toggle=toc] .nav-link.active {
+  color: var(--global-theme-color);
+  border-left-color: var(--global-theme-color);
+  font-size: 0.75rem;
+}
+nav[data-toggle=toc] .nav-link.active:hover {
+  color: var(--global-hover-color);
+  border-left-color: var(--global-hover-color);
+}
+
+/* small screens */
+@media (max-width: 576px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[data-toggle=toc] {
+    visibility: hidden;
+    height: 0;
+    top: 0;
+  }
+}
+/* Tips, warnings, and dangers blockquotes */
+.post .post-content blockquote.block-tip {
+  border-color: var(--global-tip-block);
+  background-color: var(--global-tip-block-bg);
+}
+.post .post-content blockquote.block-tip p {
+  color: var(--global-tip-block-text);
+}
+.post .post-content blockquote.block-tip h1, .post .post-content blockquote.block-tip h2, .post .post-content blockquote.block-tip h3, .post .post-content blockquote.block-tip h4, .post .post-content blockquote.block-tip h5, .post .post-content blockquote.block-tip h6 {
+  color: var(--global-tip-block-title);
+}
+.post .post-content blockquote.block-warning {
+  border-color: var(--global-warning-block);
+  background-color: var(--global-warning-block-bg);
+}
+.post .post-content blockquote.block-warning p {
+  color: var(--global-warning-block-text);
+}
+.post .post-content blockquote.block-warning h1, .post .post-content blockquote.block-warning h2, .post .post-content blockquote.block-warning h3, .post .post-content blockquote.block-warning h4, .post .post-content blockquote.block-warning h5, .post .post-content blockquote.block-warning h6 {
+  color: var(--global-warning-block-title);
+}
+.post .post-content blockquote.block-danger {
+  border-color: var(--global-danger-block);
+  background-color: var(--global-danger-block-bg);
+}
+.post .post-content blockquote.block-danger p {
+  color: var(--global-danger-block-text);
+}
+.post .post-content blockquote.block-danger h1, .post .post-content blockquote.block-danger h2, .post .post-content blockquote.block-danger h3, .post .post-content blockquote.block-danger h4, .post .post-content blockquote.block-danger h5, .post .post-content blockquote.block-danger h6 {
+  color: var(--global-danger-block-title);
 }
 
 /*******************************************************************************
