@@ -21,6 +21,5 @@ I am a third-year undergraduate student at Tsinghua University (THU), majoring i
 My research interests include ***human robot interaction*** and ***medical and healthcare robots***.
 
 I have been working as a research assistant at [Intelligent Robotic Manipulation Lab](https://sites.google.com/view/homepageoflixiang/home) in Tsinghua since 2021, advised by Professor [Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ).
-Prior to that, I was a research intern at [DISCOVER Lab](https://github.com/AIR-DISCOVER).
 
-I will start working as a research intern at [Robotic Caregiving and Human Interaction (RCHI) lab](https://rchi-lab.github.io) in Carnegie Mellon University this summer, advised by Professor [Zackory Erickson](https://zackory.com).
+I am working as a research intern at [Robotic Caregiving and Human Interaction (RCHI) lab](https://rchi-lab.github.io) in Carnegie Mellon University this summer, advised by Professor [Zackory Erickson](https://zackory.com).
