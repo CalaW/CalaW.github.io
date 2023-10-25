@@ -3,7 +3,6 @@
  * To adjust anything, simply edit the variables below and rebuild the theme.
  ******************************************************************************/
 
-
 // Colors
 $red-color:           #FF3636 !default;
 $red-color-dark:      #B71C1C !default;
@@ -34,7 +33,6 @@ $viva-magenta-color:  #BE3455 !default;
 
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
-
 $dracula-BG       : #22212C !default;
 $dracula-FG       : #F8F8F2 !default;
 $dracula-SELECTION: #454158 !default;
@@ -51,3 +49,6 @@ $dracula-YELLOW   : #FFFF80 !default;
 
 $code-bg-color-light:     rgba($classic-blue-color, 0.05);
 $code-bg-color-dark:      $dracula-BG;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
