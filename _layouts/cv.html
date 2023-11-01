@@ -2,7 +2,9 @@
 layout: default
 ---
 <!-- _layouts/cv.html -->
+<!--
 {% unless site.data.resume %}
+-->
 <div class="post">
 
   <header class="post-header">
@@ -10,8 +12,9 @@ layout: default
       {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
   </header>
 
-          {% pdf "/assets/pdf/cv.pdf" no_link %}
+  {% pdf "/assets/pdf/cv.pdf" no_link %}
 
+<!-- 
   <article>
     <div class="cv">
       {% for entry in site.data.cv %}
@@ -37,8 +40,10 @@ layout: default
       {% endfor %}
       </div>
   </article>
+-->
 
 </div>
+<!--
 {% else %}
 <div class="post">
 
@@ -96,3 +101,4 @@ layout: default
 
 </div>
 {% endunless %}
+-->
