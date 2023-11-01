@@ -8,8 +8,21 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
 
+@font-face {
+  font-family: 'Source Serif CN Pruned';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/SourceHanSerifCN-Prune.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+9648, U+8FB0;
+}
+
+.chn {
+  font-family: 'Source Serif CN Pruned', serif;
+}
+
 p, h1, h2, h3, h4, h5, h6, li {
-  font-family: 'Lora', 'Noto Serif SC', serif;
+  font-family: 'Lora', 'Source Serif SC Pruned', serif;
 }
 
 strong {
