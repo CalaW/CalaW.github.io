@@ -7,7 +7,7 @@ first_name: Chen
 middle_name:
 last_name: Chen
 chinese_name: 陈辰
-email: chen-che20@mails.tsinghua.edu.cn
+email: me@calaw.cc
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Chen Chen's personal webpage. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: 
@@ -33,7 +33,7 @@ highlight_theme_dark: monokai    # https://github.com/jwarby/jekyll-pygments-the
 repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
-  enabled: true
+  enabled: false
   theme_light: flat    # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed  # https://github.com/ryo-ma/github-profile-trophy
 
@@ -73,7 +73,7 @@ github_username: CalaW # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: # your LinkedIn user name
+linkedin_username: 辰-陈-b2a303203 # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: WV7thfcAAAAJ # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
