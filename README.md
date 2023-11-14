@@ -128,7 +128,6 @@ Feel free to add your own page(s) by sending a PR.
 <a href="https://abhinav-mehta.github.io/" target="_blank">★</a>
 <a href="https://shubhashisroydipta.com/" target="_blank">★</a>
 <a href="https://astanziola.github.io" target="_blank">★</a>
-<a href="https://tinkerer.in" target="_blank">★</a>
 </td>
 </tr>
 <tr>
