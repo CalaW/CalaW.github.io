@@ -1069,3 +1069,12 @@ nav[data-toggle="toc"] {
     padding-top: 0.5rem;
   }
 }
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+#toc-sidebar {
+  z-index: 1;
+}
