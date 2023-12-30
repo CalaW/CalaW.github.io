@@ -349,7 +349,7 @@ imagemagick:
     - ".tiff"
     - ".gif"
   output_formats:
-    webp: "-quality 85 -strip"
+    webp: "-quality 85"
 
 # -----------------------------------------------------------------------------
 # Jekyll Diagrams
