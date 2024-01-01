@@ -3,8 +3,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 Label MAINTAINER Amir Pourmand
 
-# RUN sed -i "s@http://.*ports.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list 
-
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     locales \
     imagemagick \
@@ -26,9 +24,7 @@ ENV LANG=en_US.UTF-8 \
     JEKYLL_ENV=production
 
 # install jekyll and dependencies
-# RUN gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
 RUN gem install jekyll bundler
-# RUN bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
 
 RUN mkdir /srv/jekyll
 

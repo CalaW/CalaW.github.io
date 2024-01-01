@@ -27,28 +27,13 @@ $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     #1C1C1D;
 $grey-900:            #212529;
 
-$tsinghua-color:      #660874 !default;
-$classic-blue-color:  #0F4C81 !default;
-$viva-magenta-color:  #BE3455 !default;
-
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
-$dracula-BG       : #22212C !default;
-$dracula-FG       : #F8F8F2 !default;
-$dracula-SELECTION: #454158 !default;
-$dracula-COMMENT  : #7970A9 !default;
-$dracula-CYAN     : #80FFEA !default;
-$dracula-GREEN    : #8AFF80 !default;
-$dracula-ORANGE   : #FFCA80 !default;
-$dracula-PINK     : #FF80BF !default;
-$dracula-PURPLE   : #9580FF !default;
-$dracula-RED      : #FF9580 !default;
-$dracula-YELLOW   : #FFFF80 !default;
 
 // Theme colors
 
-$code-bg-color-light:     rgba($classic-blue-color, 0.05);
-$code-bg-color-dark:      $dracula-BG;
+$code-bg-color-light:     rgba($purple-color, 0.05);
+$code-bg-color-dark:      #2c3237 !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";
