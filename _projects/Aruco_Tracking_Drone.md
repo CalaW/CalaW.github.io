@@ -16,7 +16,6 @@ category: work
 ## Task
 
 1. Use detected Aruco id to determine the target height of the drone. The target height is `3 × aruco_id`.
-   <!-- ![demo1](assets/img/Aruco-demo1.gif) -->
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/Aruco-demo1.gif" title="task 1" class="img-fluid rounded z-depth-1" %}
@@ -24,7 +23,6 @@ category: work
 </div>
    The id of aruco are 45, 35 and 25, thus the height are 135cm, 105cm and 75cm accordingly. Notice the ascent/descent of the drone when detecting the aruco.
 2. Track the position of the detected aruco. (Hover over the detected aruco)
-   <!-- ![demo2](assets/img/Aruco-demo2.gif) -->
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/Aruco-demo2.gif" title="task 2" class="img-fluid rounded z-depth-1" %}

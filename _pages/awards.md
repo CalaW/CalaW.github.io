@@ -8,6 +8,8 @@ nav: true
 nav_order: 3
 ---
 
+- **Jiang Nanxiang Scholarship**, 2023<br/>
+40 out of 16320 undergrads in Tsinghua.
 - **China National Scholarship**, 2022<br/>
 *Top 0.1%*, highest scholarship given by the Chinese government.
 - **Outstanding Project of Student Research Training (SRT) Program**, Tsinghua University, 2022<br/>
