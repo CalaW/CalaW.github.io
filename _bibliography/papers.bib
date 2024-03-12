@@ -1,23 +1,24 @@
 ---
 ---
 
-@inproceedings{yan2022adaptive,
+@inproceedings{padmanabha24independence,
   bibtex_show = {true},
-  author      = {Yan, Xiangjie and Chen, Chen and Li, Xiang},
-  booktitle   = {2022 International Conference on Robotics and Automation (ICRA)},
-  title       = {Adaptive Vision-Based Control of Redundant Robots with Null-Space Interaction for Human-Robot Collaboration},
-  year        = {2022},
-  volume      = {},
-  number      = {},
-  pages       = {2803-2809},
-  abstract    = {Human-robot collaboration aims to extend human ability through cooperation with robots. This technology is currently helping people with physical disabilities, has transformed the manufacturing process of companies, improved surgical performance, and will likely revolutionize the daily lives of everyone in the future. Being able to enhance the performance of both sides, such that human-robot collaboration outperforms a single robot/human, remains an open issue. For safer and more effective collaboration, a new control scheme has been proposed for redundant robots in this paper, consisting of an adaptive vision-based control term in task space and an interactive control term in null space. Such a formulation allows the robot to autonomously carry out tasks in an unknown environment without prior calibration while also interacting with humans to deal with unforeseen changes (e.g., potential collision, temporary needs) under the redundant configuration. The decoupling between task space and null space helps to explore the collaboration safely and effectively without affecting the main task of the robot end-effector. The stability of the closed-loop system has been rigorously proved with Lyapunov methods, and both the convergence of the position error in task space and that of the damping model in null space are guaranteed. The experimental results of a robot manipulator guided with the technology of augmented reality (AR) are presented to illustrate the performance of the control scheme.},
-  keywords    = {},
-  doi         = {10.1109/ICRA46639.2022.9812218},
-  issn        = {},
-  code        = {https://github.com/yanseim/Vision-Based-Control},
-  month       = {May},
+  title       = {Independence in the Home: A Wearable Interface for a Person with Quadriplegia to Teleoperate a Mobile Manipulator},
+  booktitle   = {Proceedings of the 2024 ACM/IEEE International Conference on Human-Robot Interaction},
+  author      = {Padmanabha, Akhil and Gupta, Janavi and Chen, Chen and Yang, Jehan and Nguyen, Vy and Weber, Douglas J and Majidi, Carmel and Erickson, Zackory},
+  year        = {2024},
+  month       = mar,
+  pages       = {542--551},
+  publisher   = {ACM},
+  address     = {Boulder, CO, USA},
+  doi         = {10.1145/3610977.3634964},
+  urldate     = {2024-03-12},
+  isbn        = {9798400703225},
+  abstract    = {Teleoperation of mobile manipulators within a home environment can significantly enhance the independence of individuals with severe motor impairments, allowing them to regain the ability to perform self-care and household tasks. There is a critical need for novel teleoperation interfaces to offer effective alternatives for individuals with impairments who may encounter challenges in using existing interfaces due to physical limitations. In this work, we iterate on one such interface, HAT (Head-Worn Assistive Teleoperation), an inertial-based wearable integrated into any head-worn garment. We evaluate HAT through a 7-day in-home study with Henry Evans, a non-speaking individual with quadriplegia who has participated extensively in assistive robotics studies. We additionally evaluate HAT with a proposed shared control method for mobile manipulators termed Driver Assistance and demonstrate how the interface generalizes to other physical devices and contexts. Our results show that HAT is a strong teleoperation interface across key metrics including efficiency, errors, learning curve, and workload. Code and videos are located on our project website.},
   selected    = {true},
-  preview     = {icra2022.jpeg}
+  preview     = {HAT2.png},
+  code        = {https://github.com/RCHI-Lab/HAT2},
+  website     = {https://sites.google.com/view/hat2-teleop/home}
 }
 
 @article{yan2024complementary,
@@ -38,6 +39,25 @@
   month       = {Jan}
 }
 
+@inproceedings{yan2022adaptive,
+  bibtex_show = {true},
+  author      = {Yan, Xiangjie and Chen, Chen and Li, Xiang},
+  booktitle   = {2022 International Conference on Robotics and Automation (ICRA)},
+  title       = {Adaptive Vision-Based Control of Redundant Robots with Null-Space Interaction for Human-Robot Collaboration},
+  year        = {2022},
+  volume      = {},
+  number      = {},
+  pages       = {2803-2809},
+  abstract    = {Human-robot collaboration aims to extend human ability through cooperation with robots. This technology is currently helping people with physical disabilities, has transformed the manufacturing process of companies, improved surgical performance, and will likely revolutionize the daily lives of everyone in the future. Being able to enhance the performance of both sides, such that human-robot collaboration outperforms a single robot/human, remains an open issue. For safer and more effective collaboration, a new control scheme has been proposed for redundant robots in this paper, consisting of an adaptive vision-based control term in task space and an interactive control term in null space. Such a formulation allows the robot to autonomously carry out tasks in an unknown environment without prior calibration while also interacting with humans to deal with unforeseen changes (e.g., potential collision, temporary needs) under the redundant configuration. The decoupling between task space and null space helps to explore the collaboration safely and effectively without affecting the main task of the robot end-effector. The stability of the closed-loop system has been rigorously proved with Lyapunov methods, and both the convergence of the position error in task space and that of the damping model in null space are guaranteed. The experimental results of a robot manipulator guided with the technology of augmented reality (AR) are presented to illustrate the performance of the control scheme.},
+  keywords    = {},
+  doi         = {10.1109/ICRA46639.2022.9812218},
+  issn        = {},
+  code        = {https://github.com/yanseim/Vision-Based-Control},
+  month       = {May},
+  selected    = {true},
+  preview     = {icra2022.jpeg}
+}
+
 @misc{yan2023multimodal,
   bibtex_show   = {true},
   title         = {Multi-Modal Interaction Control of Ultrasound Scanning Robots with Safe Human Guidance and Contact Recovery},
@@ -48,18 +68,4 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.RO},
   preview       = {arxiv2023.png}
-}
-
-@misc{akhil2023independence,
-  bibtex_show   = {true},
-  title         = {Independence in the Home: A Wearable Interface for a Person with Quadriplegia to Teleoperate a Mobile Manipulator},
-  author        = {Padmanabha, Akhil and Gupta, Janavi and Chen, Chen and Yang, Jehan and Nguyen, Vy and Weber, Douglas J and Majidi, Carmel and Erickson, Zackory},
-  year          = {2023},
-  month         = {Dec},
-  eprint        = {2312.15071},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.RO},
-  selected      = {true},
-  preview       = {HAT2.png},
-  code          = {https://github.com/RCHI-Lab/HAT2}
 }
