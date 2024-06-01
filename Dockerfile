@@ -27,20 +27,19 @@ ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8 \
     JEKYLL_ENV=production
 
-# install jekyll and dependencies
-RUN gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
-
-RUN gem install jekyll bundler
-
 RUN mkdir /srv/jekyll
 
 ADD Gemfile /srv/jekyll
 
 WORKDIR /srv/jekyll
 
-RUN bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+# install jekyll and dependencies
+RUN gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/ && \
+    gem install jekyll bundler
 
-RUN bundle install --no-cache
+RUN bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems && \
+    bundle install --no-cache
+
 # && rm -rf /var/lib/gems/3.1.0/cache
 EXPOSE 8080
 
