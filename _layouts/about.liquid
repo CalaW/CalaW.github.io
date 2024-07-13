@@ -7,11 +7,16 @@ layout: default
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
+        - <span class="chn">{{ site.chinese_name }}</span>
+        {% comment %} modified {% endcomment %}
       {% else %}
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc">
+      <em>{{ page.subtitle }}</em>
+    </p>
+    {% comment %} modified {% endcomment %}
   </header>
 
   <article>
@@ -59,7 +64,8 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        {% comment %} modified {% endcomment %}
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

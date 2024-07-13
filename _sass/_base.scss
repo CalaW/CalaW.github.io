@@ -19,6 +19,38 @@ strong {
   color: var(--global-text-color);
 }
 
+@font-face {
+  // modified
+  font-family: "Source Serif CN Pruned";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SourceHanSerifCN-Prune.woff2") format("woff2");
+  font-display: swap;
+  unicode-range: U+9648, U+8FB0;
+}
+
+.chn {
+  // modified
+  font-family: "Source Serif CN Pruned", serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  // modified
+  font-family: "Lora", "Source Serif SC Pruned", serif;
+}
+
+strong {
+  // modified
+  font-weight: 600;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -708,7 +740,7 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: bolder;
+        font-weight: 600; // modified
       }
 
       .author {
@@ -747,6 +779,7 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
+          font-family: "Roboto", sans-serif; // modified
 
           &:hover {
             color: var(--global-theme-color);
@@ -777,7 +810,7 @@ footer.sticky-bottom {
         font-size: 0.875rem;
         max-height: 0px;
         overflow: hidden;
-        text-align: justify;
+        text-align: match-parent; // modified
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
