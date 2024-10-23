@@ -190,7 +190,7 @@ collections:
   news:
     defaults:
       layout: post
-    output: false # modified
+    output: true
     permalink: /:collection/:title/
   projects:
     output: true
