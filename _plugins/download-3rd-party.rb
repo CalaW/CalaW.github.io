@@ -225,6 +225,7 @@ Jekyll::Hooks.register :site, :after_init do |site|
                 end
               else
                 # download the font files and change the url to the local file
+                puts site.config['third_party_libraries'][key]
                 download_fonts(url, File.join(site.source, 'assets', 'libs', key, site.config['third_party_libraries'][key]['local'][type]), font_file_types)
               end
 
