@@ -37,12 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-our-paper-adaptive-vision-based-control-of-redundant-robots-with-null-space-interaction-for-human-robot-collaboration-is-accepted-by-icra-2022",
+        },{id: "news-our-paper-adaptive-vision-based-control-of-redundant-robots-with-null-space-interaction-for-human-robot-collaboration-is-accepted-by-icra-2022",
           title: 'Our paper “Adaptive Vision-Based Control of Redundant Robots with Null-Space Interaction for Human-Robot...',
           description: "",
           section: "News",},{id: "news-i-received-china-national-scholarship-highest-scholarship-given-by-the-chinese-government-top-0-1",
