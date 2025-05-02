@@ -2,9 +2,7 @@ name: Build My Docker Image Slim
 
 on:
   push:
-    branches:
-      - master
-      - main
+    branches: [master, main]
     paths:
       - ".github/workflows/my-build-docker.yml"
       - ".github/workflows/deploy-image.yml"
@@ -17,38 +15,39 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-amd64:
-    runs-on: ubuntu-latest
+  build-and-slim:
+    strategy:
+      matrix:
+        arch: [amd64, arm64]
+        include:
+          - arch: amd64
+            runner: ubuntu-latest
+          - arch: arm64
+            runner: ubuntu-24.04-arm
+
+    runs-on: ${{ matrix.runner }}
+    outputs:
+      arch: ${{ matrix.arch }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Login
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ secrets.DOCKER_REGISTRY }}
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Build and push
+      - name: Build image (not pushed yet)
         uses: docker/build-push-action@v6
         with:
           context: .
           push: false
-          tags: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:amd64
+          tags: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:${{ matrix.arch }}
 
-      - name: update docker-compose and _config.yml
-        shell: bash
-        env:
-          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+      - name: Update docker-compose and config
         run: |
-          sed -i "s|\.:|${{ github.workspace }}:|g" ${{ github.workspace }}/docker-compose.yml
-          sed -i -E "s|image: amirpourmand/al-folio:.*|image: ${DOCKER_REGISTRY}/calaw/al-folio:amd64|" ${{ github.workspace }}/docker-compose.yml
-          sed -i '/^\s*- ".gif"$/d' ${{ github.workspace }}/_config.yml # gif is consuming too much build time
+          sed -i "s|\.:|${{ github.workspace }}:|g" docker-compose.yml
+          sed -i -E "s|image: .+|image: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:${{ matrix.arch }}|" docker-compose.yml
+          sed -i '/^\s*- ".gif"$/d' _config.yml
 
-      # Slim it!
-      - uses: kitabisa/docker-slim-action@v1
+      - name: Slim the image
+        uses: kitabisa/docker-slim-action@v1
         env:
           DSLIM_COMPOSE_FILE: ${{ github.workspace }}/docker-compose.yml
           DSLIM_TARGET_COMPOSE_SVC: jekyll
@@ -56,67 +55,35 @@ jobs:
           DSLIM_HTTP_PROBE_RETRY_COUNT: 100
         with:
           target: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio
-          tag: "slim-amd64"
+          tag: slim-${{ matrix.arch }}
 
-      # Push to the registry
-      - name: Push to the registry
-        shell: bash
-        env:
-          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
-        run: docker image push "$DOCKER_REGISTRY/calaw/al-folio:slim-amd64"
-
-  build-arm64:
-    runs-on: ubuntu-24.04-arm
-    needs: build-amd64
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Login
+      - name: Login to Docker registry
         uses: docker/login-action@v3
         with:
           registry: ${{ secrets.DOCKER_REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push
-        uses: docker/build-push-action@v6
+      # Push to the registry
+      - name: Push to the registry
+        run: docker image push "${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:slim-${{ matrix.arch }}"
+
+  push-and-manifest:
+    name: Create Multi-Arch Manifest
+    needs: build-and-slim
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Login to Docker registry
+        uses: docker/login-action@v3
         with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:arm64
+          registry: ${{ secrets.DOCKER_REGISTRY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: update docker-compose and _config.yml
-        shell: bash
-        env:
-          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+      - name: Create and push multi-arch manifest
         run: |
-          sed -i "s|\.:|${{ github.workspace }}:|g" ${{ github.workspace }}/docker-compose.yml
-          sed -i -E "s|image: amirpourmand/al-folio:.*|image: ${DOCKER_REGISTRY}/calaw/al-folio:arm64|" ${{ github.workspace }}/docker-compose.yml
-          sed -i '/^\s*- ".gif"$/d' ${{ github.workspace }}/_config.yml # gif is consuming too much build time
-
-      - uses: kitabisa/docker-slim-action@v1
-        env:
-          DSLIM_COMPOSE_FILE: ${{ github.workspace }}/docker-compose.yml
-          DSLIM_TARGET_COMPOSE_SVC: jekyll
-          DSLIM_HTTP_PROBE_RETRY_WAIT: 10
-          DSLIM_HTTP_PROBE_RETRY_COUNT: 100
-        with:
-          target: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio
-          tag: "slim-arm64"
-
-      - name: Pull slim amd64 image
-        shell: bash
-        env:
-          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
-        run: docker pull "$DOCKER_REGISTRY/calaw/al-folio:slim-amd64"
-
-      - name: Create and push slim multi-arch manifest
-        shell: bash
-        env:
-          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
-        run: |
-          docker manifest create "$DOCKER_REGISTRY/calaw/al-folio:latest" \
-            --amend "$DOCKER_REGISTRY/calaw/al-folio:slim-amd64" \
-            --amend "$DOCKER_REGISTRY/calaw/al-folio:slim-arm64"
-              docker manifest push "$DOCKER_REGISTRY/calaw/al-folio:latest"
+          docker manifest create ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:latest \
+            --amend ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:slim-amd64 \
+            --amend ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:slim-arm64
+          docker manifest push ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:latest
