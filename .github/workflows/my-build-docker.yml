@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build My Docker Image Slim
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - master
       - main
     paths:
+      - ".github/workflows/my-build-docker.yml"
       - ".github/workflows/deploy-image.yml"
       - "bin/entry_point.sh"
       - "Dockerfile"
@@ -16,18 +17,60 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-amd64:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+      - name: Login
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.DOCKER_REGISTRY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:amd64
+
+      - name: update docker-compose and _config.yml
+        shell: bash
+        env:
+          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+        run: |
+          sed -i "s|\.:|${{ github.workspace }}:|g" ${{ github.workspace }}/docker-compose.yml
+          sed -i -E "s|image: amirpourmand/al-folio:.*|image: ${DOCKER_REGISTRY}/calaw/al-folio:amd64|" ${{ github.workspace }}/docker-compose.yml
+          sed -i '/^\s*- ".gif"$/d' ${{ github.workspace }}/_config.yml # gif is consuming too much build time
+
+      # Slim it!
+      - uses: kitabisa/docker-slim-action@v1
+        env:
+          DSLIM_COMPOSE_FILE: ${{ github.workspace }}/docker-compose.yml
+          DSLIM_TARGET_COMPOSE_SVC: jekyll
+          DSLIM_HTTP_PROBE_RETRY_WAIT: 10
+          DSLIM_HTTP_PROBE_RETRY_COUNT: 100
+        with:
+          target: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio
+          tag: "slim-amd64"
+
+      # Push to the registry
+      - name: Push to the registry
+        shell: bash
+        env:
+          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+        run: docker image push "$DOCKER_REGISTRY/calaw/al-folio:slim-amd64"
+
+  build-arm64:
+    runs-on: ubuntu-24.04-arm
+    needs: build-amd64
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Login
         uses: docker/login-action@v3
@@ -41,7 +84,39 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
-          tags: ${{ secrets.DOCKER_REGISTRY }}calaw/al-folio
-      
-      
+          tags: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:arm64
+
+      - name: update docker-compose and _config.yml
+        shell: bash
+        env:
+          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+        run: |
+          sed -i "s|\.:|${{ github.workspace }}:|g" ${{ github.workspace }}/docker-compose.yml
+          sed -i -E "s|image: amirpourmand/al-folio:.*|image: ${DOCKER_REGISTRY}/calaw/al-folio:arm64|" ${{ github.workspace }}/docker-compose.yml
+          sed -i '/^\s*- ".gif"$/d' ${{ github.workspace }}/_config.yml # gif is consuming too much build time
+
+      - uses: kitabisa/docker-slim-action@v1
+        env:
+          DSLIM_COMPOSE_FILE: ${{ github.workspace }}/docker-compose.yml
+          DSLIM_TARGET_COMPOSE_SVC: jekyll
+          DSLIM_HTTP_PROBE_RETRY_WAIT: 10
+          DSLIM_HTTP_PROBE_RETRY_COUNT: 100
+        with:
+          target: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio
+          tag: "slim-arm64"
+
+      - name: Pull slim amd64 image
+        shell: bash
+        env:
+          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+        run: docker pull "$DOCKER_REGISTRY/calaw/al-folio:slim-amd64"
+
+      - name: Create and push slim multi-arch manifest
+        shell: bash
+        env:
+          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+        run: |
+          docker manifest create "$DOCKER_REGISTRY/calaw/al-folio:latest" \
+            --amend "$DOCKER_REGISTRY/calaw/al-folio:slim-amd64" \
+            --amend "$DOCKER_REGISTRY/calaw/al-folio:slim-arm64"
+              docker manifest push "$DOCKER_REGISTRY/calaw/al-folio:latest"
