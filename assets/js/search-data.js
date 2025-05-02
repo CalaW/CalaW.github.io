@@ -69,13 +69,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/Mesh_Simplification/";
             },},{
-        id: 'social-dblp',
-        title: 'DBLP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://dblp.org/pid/65/4423-87", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -104,18 +97,18 @@ ninja.data = [{
           window.open("https://orcid.org/0000-0003-2588-7376", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=WV7thfcAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/65/4423-87", "_blank");
         },
       },{
       id: 'light-theme',
