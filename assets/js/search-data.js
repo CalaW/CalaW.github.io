@@ -47,27 +47,27 @@ ninja.data = [{
           title: 'Graduated from Tsinghua University :purple_heart:',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/240629-grad/";
+              window.location.href = "/news/240629-grad.html";
             },},{id: "projects-aruco-tracking-drone",
           title: 'Aruco tracking drone',
           description: "Course project for Contemporary Electronic System Design.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Aruco_Tracking_Drone/";
+              window.location.href = "/projects/Aruco_Tracking_Drone.html";
             },},{id: "projects-jump-point-search",
           title: 'Jump Point Search',
           description: "Course project for artificial intelligence.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Jump_Point_Search/";
+              window.location.href = "/projects/Jump_Point_Search.html";
             },},{id: "projects-marine-classification",
           title: 'Marine Classification',
           description: "Course project for artificial intelligence.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Marine_Classification/";
+              window.location.href = "/projects/Marine_Classification.html";
             },},{id: "projects-mesh-simplification",
           title: 'Mesh Simplification',
           description: "Course project for data structure.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Mesh_Simplification/";
+              window.location.href = "/projects/Mesh_Simplification.html";
             },},{
         id: 'social-email',
         title: 'email',
