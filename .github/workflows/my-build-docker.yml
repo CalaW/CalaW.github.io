@@ -44,7 +44,7 @@ jobs:
         run: |
           sed -i "s|\.:|${{ github.workspace }}:|g" docker-compose.yml
           sed -i -E "s|image: .+|image: ${{ secrets.DOCKER_REGISTRY }}/calaw/al-folio:${{ matrix.arch }}|" docker-compose.yml
-          sed -i '/^\s*- ".gif"$/d' _config.yml
+          sed -i -E '/^[[:space:]]*input_directories:/,/^[^[:space:]]/ s|assets/img/|assets/blank_images/|' _config.yml
 
       - name: Slim the image
         uses: kitabisa/docker-slim-action@v1
