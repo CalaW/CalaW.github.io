@@ -24,9 +24,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a first year master's student at Tsinghua University, studying robotics.
+I am a second year master's student at Tsinghua University, studying robotics.
 
-My research interests include **_human robot interaction_** and **_medical and healthcare robots_**.
+My research interests include **_human–robot interaction_** and **_medical and healthcare robots_**.
 
-I have been working as a research assistant at [Intelligent Robotic Manipulation Lab](https://sites.google.com/view/homepageoflixiang/home) in Tsinghua since 2021, advised by Professor [Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ).
-I am working as a research intern at [Robotic Caregiving and Human Interaction (RCHI) lab](https://rchi-lab.github.io) in Carnegie Mellon University since this summer, advised by Professor [Zackory Erickson](https://zackory.com).
+I have been working as a research assistant at the [Intelligent Robotic Manipulation Lab](https://thu-irml.com) in Tsinghua since 2021, advised by Professor [Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ).
+In the summer of 2023, I was fortunate to work with Professor [Zackory Erickson](https://zackory.com) at the [RCHI Lab](https://rchi-lab.github.io), Carnegie Mellon University.
