@@ -28,5 +28,5 @@ I am a second year master's student at Tsinghua University, studying robotics.
 
 My research interests include **_human–robot interaction_** and **_medical and healthcare robots_**.
 
-I have been working as a research assistant at the [Intelligent Robotic Manipulation Lab](https://thu-irml.com) in Tsinghua since 2021, advised by Professor [Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ).
+I have been working at the [Intelligent Robotic Manipulation Lab](https://thu-irml.com) in Tsinghua since 2021, advised by Professor [Xiang Li](https://scholar.google.com.sg/citations?hl=zh-CN&user=6EIX-JQAAAAJ).
 In the summer of 2023, I was fortunate to work with Professor [Zackory Erickson](https://zackory.com) at the [RCHI Lab](https://rchi-lab.github.io), Carnegie Mellon University.
