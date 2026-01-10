@@ -11,7 +11,7 @@ contact_note: > # modified
   Best way to reach me is via email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:" # modified
   Chen Chen's personal webpage. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: # modified
+footer_text: > # modified
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: robotics, computer science, human robot interaction # add your own keywords or leave empty # modified
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -40,8 +40,6 @@ repo_trophies:
 # -----------------------------------------------------------------------------
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
-
-rss_icon: false # modified
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -84,6 +82,11 @@ google_site_verification: # your google-site-verification ID (Google Search Cons
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+# modified, deleted
+
+# -----------------------------------------------------------------------------
 # Newsletter
 # -----------------------------------------------------------------------------
 
@@ -97,6 +100,8 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
+  books:
+    output: true
   news:
     defaults:
       layout: post
@@ -149,6 +154,7 @@ keep_files:
 
 # Plug-ins
 plugins:
+  # - jekyll-archives-v2 # modified
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
@@ -192,6 +198,11 @@ jekyll-minifier:
 terser:
   compress:
     drop_console: true
+
+# -----------------------------------------------------------------------------
+# Jekyll Archives
+# -----------------------------------------------------------------------------
+# modified, deleted
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -296,7 +307,7 @@ imagemagick:
     - ".tiff"
     - ".gif"
   output_formats:
-    webp: "-quality 85"
+    webp: "-auto-orient -quality 85"
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.
@@ -481,6 +492,12 @@ third_party_libraries:
     url:
       js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe-lightbox.esm.min.js"
     version: "5.4.4"
+  plotly:
+    integrity:
+      js: "sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/plotly.js@{{version}}/dist/plotly.min.js"
+    version: "3.0.1"
   polyfill:
     url:
       js: "https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
