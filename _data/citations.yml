@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-12'
+  last_updated: '2026-01-28'
 papers:
   WV7thfcAAAAJ:2osOgNQ5qMEC:
     citations: 1
@@ -10,7 +10,7 @@ papers:
     title: 'Independence in the home: A wearable interface for a person with quadriplegia to teleoperate a mobile manipulator'
     year: '2024'
   WV7thfcAAAAJ:UeHWp8X0CEIC:
-    citations: 5
+    citations: 6
     title: 'Robotic in-hand manipulation for large-range precise object movement: The RGMC champion solution'
     year: '2025'
   WV7thfcAAAAJ:qjMakFHDy7sC:
@@ -22,6 +22,6 @@ papers:
     title: "A complementary framework for human\u2013robot collaboration with a mixed AR\u2013haptic interface"
     year: '2023'
   WV7thfcAAAAJ:u5HHmVD_uO8C:
-    citations: 8
+    citations: 9
     title: Adaptive vision-based control of redundant robots with null-space interaction for human-robot collaboration
     year: '2022'
