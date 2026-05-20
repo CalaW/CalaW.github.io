@@ -1,20 +1,20 @@
 metadata:
-  last_updated: '2026-04-03'
+  last_updated: '2026-05-20'
 papers:
   WV7thfcAAAAJ:2osOgNQ5qMEC:
-    citations: 1
+    citations: 2
     title: "Visual Attention Based Cognitive Human\u2013Robot Collaboration for Pedicle Screw Placement in Robot-Assisted Orthopedic Surgery"
     year: '2024'
   WV7thfcAAAAJ:9yKSN-GCB0IC:
-    citations: 26
+    citations: 29
     title: 'Independence in the home: A wearable interface for a person with quadriplegia to teleoperate a mobile manipulator'
     year: '2024'
   WV7thfcAAAAJ:UeHWp8X0CEIC:
-    citations: 10
+    citations: 11
     title: 'Robotic in-hand manipulation for large-range precise object movement: The RGMC champion solution'
     year: '2025'
   WV7thfcAAAAJ:qjMakFHDy7sC:
-    citations: 15
+    citations: 16
     title: A unified interaction control framework for safe robotic ultrasound scanning with human-intention-aware compliance
     year: '2024'
   WV7thfcAAAAJ:u-x6o8ySG0sC:
@@ -26,6 +26,6 @@ papers:
     title: Adaptive vision-based control of redundant robots with null-space interaction for human-robot collaboration
     year: '2022'
   WV7thfcAAAAJ:zYLM7Y9cAGgC:
-    citations: 0
+    citations: 1
     title: Robust In-Hand Reorientation With Hierarchical RL-Based Motion Primitives and Model-Based Regrasping
     year: '2025'
