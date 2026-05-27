@@ -1,3 +1,6 @@
 {
-  "latex-workshop.bibtex-fields.sort.enabled": true
+  "latex-workshop.bibtex-fields.sort.enabled": true,
+  "cSpell.words": [
+    "inproceedings"
+  ]
 }

@@ -1,6 +1,24 @@
 ---
 ---
 
+@inproceedings{chen26swept,
+  abstract      = {Accurate registration between a prior model and the real scene is essential for high-precision robotic manipulation, yet optical methods suffer from long calibration chains, line-of-sight constraints, and fabrication errors. We propose a calibration-free alternative that reformulates contact registration as complementary-shape docking between the object and the probe's swept volume, explicitly accounting for probe geometry and leveraging both contact and non-contact evidence. Our solver integrates a global-to-local search via 3D FFT correlation over low-discrepancy SO(3) samples, then followed by continuous SE(3) refinement using Lie-algebra updates and analytic contact sensitivities. This pipeline yields efficient exploration and metric-grade convergence without fragile point correspondences. Simulation across free-form meshes achieved sub-0.04 mm and sub-0.4° accuracy and robustness to pose noise and contact loss. On a tooth-preparation robot, our method attained 0.42 mm and 3.75°, outperforming an optical tracker registration while requiring no external sensors. These results demonstrate a practical and precise registration strategy for surgical and industrial robots.},
+  address       = {Vienna, Austria},
+  archiveprefix = {arXiv},
+  arxiv         = {2605.21398},
+  author        = {Chen, Chen and Li, Yunwen and Xu, Yifan and Yan, Xiangjie and Shu, Chang and Hou, Jianxia and Song, Shiji and Li, Xiang},
+  bibtex_show   = {true},
+  booktitle     = {2026 IEEE International Conference on Robotics and Automation (ICRA)},
+  doi           = {10.48550/arXiv.2605.21398},
+  month         = jun,
+  preview       = {chen2026swept.jpg},
+  publisher     = {IEEE},
+  title         = {From Swept Contact to Pose: Probe-Aware Registration via Complementary-Shape Docking},
+  video         = {https://youtu.be/LNErWbkF8kc},
+  year          = 2026,
+}
+
+
 @article{jiang26robust,
   abstract    = {In-hand manipulation has become increasingly popular in recent robotics research, probably due to the growing trend toward humanoids and artificial general intelligence. Although existing works show promising results, they typically require expensive dexterous hands, depth cameras, and tactile sensors, which are challenging for algorithm reproduction and large-scale applications. To address this issue, this article proposes a practical and low-cost solution to the classic in-hand cube reorientation task. The proposed method is characterized by a hierarchical structure. Specifically, several in-hand motion primitives, such as object rotation and flipping, are trained using reinforcement learning. A high-level decision module switches between these motion primitives, adapting to specific task requirements without the need for retraining. We demonstrate that the proposed method achieves continuous reorientation of the cube for nearly 20 min using only a low-cost LEAP Hand and a single RGB camera. The proposed method was the winning solution for in-hand manipulation at the 9th Robotic Grasping and Manipulation Competition during ICRA 2024. Implementation details and evaluation results are discussed in this article. We also open-source hardware designs, code, and videos, which are available online, to encourage reimplementation and further development.},
   author      = {Jiang, Yongpeng and Yu, Mingrui and Chen, Chen and Jia, Yongyi and Li, Xiang},
@@ -53,6 +71,7 @@
   publisher   = {IEEE},
   selected    = {true},
   title       = {Visual Attention Based Cognitive Human--Robot Collaboration for Pedicle Screw Placement in Robot-Assisted Orthopedic Surgery},
+  video       = {https://youtu.be/LBskTidNl3E},
   website     = {https://calaw.cc/iros24-ortho},
   year        = {2024},
 }
