@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-21'
+  last_updated: '2026-08-26'
 papers:
   WV7thfcAAAAJ:2osOgNQ5qMEC:
     citations: 2
@@ -18,7 +18,7 @@ papers:
     title: 'From swept contact to pose: Probe-aware registration via complementary-shape docking'
     year: '2026'
   WV7thfcAAAAJ:qjMakFHDy7sC:
-    citations: 17
+    citations: 19
     title: A unified interaction control framework for safe robotic ultrasound scanning with human-intention-aware compliance
     year: '2024'
   WV7thfcAAAAJ:u-x6o8ySG0sC:
